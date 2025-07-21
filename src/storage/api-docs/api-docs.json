@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Refleksi",
+        "description": "Dokumentasi API untuk aplikasi kasir refleksi",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost",
+            "description": "Server API Utama"
+        }
+    ],
+    "paths": {
+        "/api/pasien": {
+            "get": {
+                "tags": [
+                    "Pasien"
+                ],
+                "summary": "Ambil semua data pasien",
+                "operationId": "12d2e9b1c4853ba6032cacfc62974979",
+                "responses": {
+                    "200": {
+                        "description": "Berhasil ambil data pasien"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Pasien",
+            "description": "Pasien"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "sanctum": {
+                "type": "apiKey",
+                "description": "Masukkan token dengan format Bearer {token}",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "sanctum": []
+        }
+    ]
+}
